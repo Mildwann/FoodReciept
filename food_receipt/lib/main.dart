@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:food_receipt/Pages/firstPage.dart';
-import 'package:food_receipt/constants/colorApp.dart';
+import 'package:food_receipt/pages/login.dart';
 
 void main() {
   runApp(const MainApp());
@@ -11,9 +10,8 @@ class MainApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      home: const SafeArea(child: firstPage()),
-      theme: new ThemeData(scaffoldBackgroundColor: Colorapp.baseBackground),
+    return const MaterialApp(
+      home: SafeArea(child: LoginPage()),
       debugShowCheckedModeBanner: false,
     );
   }
