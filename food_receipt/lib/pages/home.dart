@@ -1,6 +1,7 @@
 // ignore_for_file: camel_case_types
 
 import 'package:flutter/material.dart';
+import 'package:food_receipt/components/bottom_navbar.dart';
 import 'package:food_receipt/components/popular.dart';
 import 'package:food_receipt/components/recent.dart';
 import 'package:food_receipt/constants/colorApp.dart';
@@ -134,6 +135,7 @@ class _homePageState extends State<homePage> {
                 ],
               ),
             ),
+            // Popular
             Padding(
               padding: EdgeInsets.fromLTRB(
                   width * 0.05, height * 0.015, width * 0.05, 0),
@@ -141,33 +143,33 @@ class _homePageState extends State<homePage> {
                 scrollDirection: Axis.horizontal,
                 child: Row(
                   children: [
-                    Recent(
+                    Popular(
                       image: "assets/images/chicken1.png",
-                      text: "Fried food",
+                      categorie: "Fried food",
                       color: const Color.fromARGB(255, 242, 232, 145),
                     ),
                     SizedBox(width: width * 0.02),
-                    Recent(
+                    Popular(
                       image: "assets/images/meat.png",
-                      text: "Meat",
+                      categorie: "Meat",
                       color: const Color.fromARGB(255, 228, 178, 194),
                     ),
                     SizedBox(width: width * 0.02),
-                    Recent(
+                    Popular(
                       image: "assets/images/mama.png",
-                      text: "Noodle",
+                      categorie: "Noodle",
                       color: const Color.fromARGB(255, 196, 177, 200),
                     ),
                     SizedBox(width: width * 0.02),
-                    Recent(
+                    Popular(
                       image: "assets/images/salad.png",
-                      text: "healthy",
+                      categorie: "healthy",
                       color: const Color.fromARGB(255, 178, 212, 178),
                     ),
                     SizedBox(width: width * 0.02),
-                    Recent(
+                    Popular(
                       image: "assets/images/dessert.png",
-                      text: "dessert",
+                      categorie: "dessert",
                       color: const Color.fromARGB(255, 183, 206, 225),
                     ),
                   ],
@@ -261,41 +263,37 @@ class _homePageState extends State<homePage> {
                     ),
                   ],
                 )),
+            // Recent Recipes
             Padding(
               padding: EdgeInsets.fromLTRB(
-                  width * 0.05, height * 0.015, width * 0.05, 0),
+                  width * 0.05, height * 0.015, width * 0.05, height * 0.04),
               child: SingleChildScrollView(
                 scrollDirection: Axis.horizontal,
                 child: Row(
                   children: [
-                    Popular(
+                    Recent(
                       image: "assets/images/chicken1.png",
-                      categorie: "Fried food",
-                      color: const Color.fromARGB(255, 242, 232, 145),
+                      text: "ไก่ทอดน้ำปลา",
                     ),
                     SizedBox(width: width * 0.02),
-                    Popular(
+                    Recent(
                       image: "assets/images/meat.png",
-                      categorie: "Meat",
-                      color: const Color.fromARGB(255, 228, 178, 194),
+                      text: "ข้าวหน้าเนื้อ",
                     ),
                     SizedBox(width: width * 0.02),
-                    Popular(
+                    Recent(
                       image: "assets/images/mama.png",
-                      categorie: "Noodle",
-                      color: const Color.fromARGB(255, 196, 177, 200),
+                      text: "มาม่าซุปปลาดแง",
                     ),
                     SizedBox(width: width * 0.02),
-                    Popular(
+                    Recent(
                       image: "assets/images/salad.png",
-                      categorie: "healthy",
-                      color: const Color.fromARGB(255, 178, 212, 178),
+                      text: "สลัดกุ้ง",
                     ),
                     SizedBox(width: width * 0.02),
-                    Popular(
+                    Recent(
                       image: "assets/images/dessert.png",
-                      categorie: "dessert",
-                      color: const Color.fromARGB(255, 183, 206, 225),
+                      text: "คัพเค้ก",
                     ),
                   ],
                 ),

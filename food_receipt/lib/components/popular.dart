@@ -28,13 +28,19 @@ class Popular extends StatelessWidget {
               padding: const EdgeInsets.all(2),
               margin: EdgeInsets.only(top: height * 0.01),
               height: height * 0.08,
-              child: Image.asset(image)),
+              child: Image.asset(
+                image,
+                fit: BoxFit.cover,
+              )),
           SizedBox(
             height: height * 0.004,
           ),
-          Text(
-            categorie,
-            style: const TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+          Flexible(
+            child: Text(
+              categorie,
+              overflow: TextOverflow.ellipsis,
+              style: const TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+            ),
           )
         ],
       ),
