@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:food_receipt/constants/colorApp.dart';
 import 'package:food_receipt/constants/fonts.dart';
+import 'package:food_receipt/pages/home.dart';
 
 class LoginPage extends StatefulWidget {
   const LoginPage({super.key});
@@ -21,17 +22,13 @@ class _LoginPageState extends State<LoginPage> {
         color: Colorapp.red,
         child: Column(
           children: [
-            Padding(
-              padding: const EdgeInsets.only(top: 50),
-              child: SizedBox(
-                height: 50,
-                child: Image.asset("assets/images/meat.png"),
-              ),
+            SizedBox(
+              height: height * 0.4,
+              child: Image.asset("assets/images/Foodtime.png"),
             ),
             Expanded(
               child: Container(
                 width: double.infinity,
-                margin: EdgeInsets.only(top: height * 0.15),
                 decoration: const BoxDecoration(
                   borderRadius: BorderRadius.only(
                     topRight: Radius.circular(40),
@@ -41,9 +38,9 @@ class _LoginPageState extends State<LoginPage> {
                     begin: Alignment.topLeft,
                     end: Alignment.bottomRight,
                     colors: [
-                      Color.fromARGB(255, 252, 242, 242),
-                      Color.fromARGB(255, 255, 241, 241),
-                      Color.fromARGB(248, 235, 214, 214),
+                      Color.fromARGB(225, 252, 242, 242),
+                      Color.fromARGB(225, 255, 241, 241),
+                      Color.fromARGB(225, 235, 214, 214),
                       Color.fromARGB(182, 225, 157, 157),
                     ],
                   ),
@@ -136,11 +133,11 @@ class _LoginPageState extends State<LoginPage> {
                             TextButton(
                               onPressed: () {},
                               child: const Text(
-                                "Forget Password?",
+                                "create account",
                                 style: TextStyle(
-                                    fontSize: 14,
+                                    fontSize: 20,
                                     fontWeight: FontWeight.w700,
-                                    color: Color.fromARGB(138, 119, 117, 117)),
+                                    color: Color.fromARGB(255, 120, 120, 120)),
                               ),
                             ),
                             ElevatedButton(
@@ -157,7 +154,13 @@ class _LoginPageState extends State<LoginPage> {
                                       fontSize: 15, color: Colors.white),
                                 ),
                               ),
-                              onPressed: () {},
+                              onPressed: () {
+                                Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (context) => const homePage()),
+                                );
+                              },
                             ),
                           ],
                         ),

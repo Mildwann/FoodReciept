@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:food_receipt/pages/home.dart';
 import 'package:food_receipt/pages/login.dart';
 
 void main() {
