@@ -2,6 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:food_receipt/components/popular.dart';
+import 'package:food_receipt/components/recent.dart';
 import 'package:food_receipt/constants/colorApp.dart';
 
 class homePage extends StatefulWidget {
@@ -140,33 +141,33 @@ class _homePageState extends State<homePage> {
                 scrollDirection: Axis.horizontal,
                 child: Row(
                   children: [
-                    Popular(
+                    Recent(
                       image: "assets/images/chicken1.png",
-                      categorie: "Fried food",
+                      text: "Fried food",
                       color: const Color.fromARGB(255, 242, 232, 145),
                     ),
                     SizedBox(width: width * 0.02),
-                    Popular(
+                    Recent(
                       image: "assets/images/meat.png",
-                      categorie: "Meat",
+                      text: "Meat",
                       color: const Color.fromARGB(255, 228, 178, 194),
                     ),
                     SizedBox(width: width * 0.02),
-                    Popular(
+                    Recent(
                       image: "assets/images/mama.png",
-                      categorie: "Noodle",
+                      text: "Noodle",
                       color: const Color.fromARGB(255, 196, 177, 200),
                     ),
                     SizedBox(width: width * 0.02),
-                    Popular(
+                    Recent(
                       image: "assets/images/salad.png",
-                      categorie: "healthy",
+                      text: "healthy",
                       color: const Color.fromARGB(255, 178, 212, 178),
                     ),
                     SizedBox(width: width * 0.02),
-                    Popular(
+                    Recent(
                       image: "assets/images/dessert.png",
-                      categorie: "dessert",
+                      text: "dessert",
                       color: const Color.fromARGB(255, 183, 206, 225),
                     ),
                   ],
@@ -241,10 +242,65 @@ class _homePageState extends State<homePage> {
             Container(
                 margin: EdgeInsets.fromLTRB(
                     width * 0.05, height * 0.03, width * 0.05, 0),
-                child: const Text(
-                  "Recent Recipes",
-                  style: TextStyle(fontSize: 20, fontWeight: FontWeight.w500),
-                ))
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    const Text(
+                      "Recent Recipes",
+                      style:
+                          TextStyle(fontSize: 20, fontWeight: FontWeight.w600),
+                    ),
+                    TextButton(
+                      onPressed: () {},
+                      child: const Text(
+                        "View All",
+                        style: TextStyle(
+                          color: Color.fromARGB(255, 61, 61, 61),
+                        ),
+                      ),
+                    ),
+                  ],
+                )),
+            Padding(
+              padding: EdgeInsets.fromLTRB(
+                  width * 0.05, height * 0.015, width * 0.05, 0),
+              child: SingleChildScrollView(
+                scrollDirection: Axis.horizontal,
+                child: Row(
+                  children: [
+                    Popular(
+                      image: "assets/images/chicken1.png",
+                      categorie: "Fried food",
+                      color: const Color.fromARGB(255, 242, 232, 145),
+                    ),
+                    SizedBox(width: width * 0.02),
+                    Popular(
+                      image: "assets/images/meat.png",
+                      categorie: "Meat",
+                      color: const Color.fromARGB(255, 228, 178, 194),
+                    ),
+                    SizedBox(width: width * 0.02),
+                    Popular(
+                      image: "assets/images/mama.png",
+                      categorie: "Noodle",
+                      color: const Color.fromARGB(255, 196, 177, 200),
+                    ),
+                    SizedBox(width: width * 0.02),
+                    Popular(
+                      image: "assets/images/salad.png",
+                      categorie: "healthy",
+                      color: const Color.fromARGB(255, 178, 212, 178),
+                    ),
+                    SizedBox(width: width * 0.02),
+                    Popular(
+                      image: "assets/images/dessert.png",
+                      categorie: "dessert",
+                      color: const Color.fromARGB(255, 183, 206, 225),
+                    ),
+                  ],
+                ),
+              ),
+            ),
           ],
         ),
       ),
