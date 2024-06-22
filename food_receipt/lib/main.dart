@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:food_receipt/pages/food.dart';
-
 import 'package:food_receipt/pages/login.dart';
 
 void main() {
