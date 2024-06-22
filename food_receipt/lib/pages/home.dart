@@ -1,7 +1,6 @@
 // ignore_for_file: camel_case_types
 
 import 'package:flutter/material.dart';
-import 'package:food_receipt/components/bottom_navbar.dart';
 import 'package:food_receipt/components/popular.dart';
 import 'package:food_receipt/components/recent.dart';
 import 'package:food_receipt/constants/colorApp.dart';
